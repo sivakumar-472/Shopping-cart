@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Background Video -->
+    <video class="bg-video" autoplay muted loop>
+        <source src="background-video.mp4" type="video/mp4">
+    </video>
+
+    <!-- Bubble Animation -->
+    <div id="bubble-container"></div>
+
+    <!-- Shopping Cart Container -->
+    <div class="cart-container">
+        <h2 class="animated-title">Shopping Cart</h2>
+
+        <!-- Product Selection Inside Cart Box -->
+        <div class="product-selection">
+            <label>Select Product:</label>
+            <select id="product">
+                <option value="cheerios">Cheerios</option>
+                <option value="cornflakes">Cornflakes</option>
+                <option value="frosties">Frosties</option>
+                <option value="shreddies">Shreddies</option>
+                <option value="weetabix">Weetabix</option>
+            </select>
+
+            <label>Quantity:</label>
+            <input type="number" id="quantity" min="1" value="1">
+
+            <button id="add-to-cart">Add to Cart</button>
+        </div>
+
+        <!-- Cart Table -->
+        <table class="cart-table">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody id="cart-items"></tbody>
+        </table>
+        
+        <!-- Cart Summary -->
+        <div class="cart-summary">
+            <p><strong>Subtotal:</strong> $<span id="subtotal">0.00</span></p>
+            <p><strong>Tax (12.5%):</strong> $<span id="tax">0.00</span></p>
+            <p><strong>Total:</strong> $<span id="total">0.00</span></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
